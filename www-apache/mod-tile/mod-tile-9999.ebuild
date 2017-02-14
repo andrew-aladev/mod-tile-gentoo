@@ -29,17 +29,14 @@ src_prepare () {
 }
 
 src_compile() {
-    default
     emake || die "make failed"
 }
 
 src_test() {
-    default
     emake test || die "test failed"
 }
 
 src_install () {
-    default
     emake DESTDIR="$D" install || die "install failed"
     emake DESTDIR="$D" install-mod_tile || die "install mod tile failed"
 }
