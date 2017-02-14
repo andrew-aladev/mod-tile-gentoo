@@ -1,0 +1,38 @@
+diff --git a/src/gen_tile.cpp b/src/gen_tile.cpp
+index 4fc389e..20da617 100644
+--- a/src/gen_tile.cpp
++++ b/src/gen_tile.cpp
+@@ -44,13 +44,13 @@
+ #else
+     #include <mapnik/graphics.hpp>
+     #if MAPNIK_VERSION < 200000
+-        #include <mapnik/envelope.hpp>
++        #include <mapnik/geometry/envelope.hpp>
+         #define image_32 Image32
+         #define image_data_32 ImageData32
+         #define box2d Envelope
+         #define zoom_to_box zoomToBox
+     #else
+-        #include <mapnik/box2d.hpp>
++        #include <mapnik/geometry/box2d.hpp>
+     #endif
+ #endif
+ 
+diff --git a/src/gen_tile_test.cpp b/src/gen_tile_test.cpp
+index 903f8b0..910cf06 100644
+--- a/src/gen_tile_test.cpp
++++ b/src/gen_tile_test.cpp
+@@ -49,13 +49,13 @@
+ 
+ #include <mapnik/version.hpp>
+ #if MAPNIK_VERSION < 200000
+-#include <mapnik/envelope.hpp>
++#include <mapnik/geometry/envelope.hpp>
+ #define image_32 Image32
+ #define image_data_32 ImageData32
+ #define box2d Envelope
+ #define zoom_to_box zoomToBox
+ #else
+-#include <mapnik/box2d.hpp>
++#include <mapnik/geometry/box2d.hpp>
+ #endif
