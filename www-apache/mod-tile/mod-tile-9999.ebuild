@@ -9,7 +9,6 @@ DESCRIPTION="A program to efficiently render and serve map tiles for www.openstr
 HOMEPAGE="https://github.com/openstreetmap/mod_tile"
 EGIT_REPO_URI="https://github.com/openstreetmap/mod_tile.git"
 
-APACHE2_MOD_CONF="51_${PN}"
 APACHE2_MOD_DEFINE="TILE"
 
 LICENSE="GPL-2"
