@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit apache-module git-r3
+inherit eutils apache-module git-r3
 
 DESCRIPTION="A program to efficiently render and serve map tiles for www.openstreetmap.org map using Apache and Mapnik."
 HOMEPAGE="https://github.com/openstreetmap/mod_tile"
@@ -22,9 +22,12 @@ DEPEND=""
 
 need_apache2
 
+PATCHES=(
+    "$FILESDIR/geometry.patch"
+)
+
 src_prepare () {
     default
-    epatch "$FILESDIR/geometry.patch"
     ./autogen.sh || die "autogen failed"
 }
 
