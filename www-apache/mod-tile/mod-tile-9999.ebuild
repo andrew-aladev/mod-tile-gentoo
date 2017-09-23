@@ -17,8 +17,8 @@ KEYWORDS=""
 
 IUSE="test"
 
-RDEPEND=""
-DEPEND=""
+RDEPEND="sci-geosciences/mapnik"
+DEPEND="$RDEPEND"
 
 need_apache2
 
